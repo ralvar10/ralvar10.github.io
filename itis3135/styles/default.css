@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(7, 8, 8);
+  text-align: center;
+  color: rgb(255, 0, 64); /* better contrast on dark background */
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+a {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(221, 219, 220);
+  text-decoration: underline; /* was 'line' — invalid */
+}
+
+main {
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Space Grotesk", "Inter", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+figcaption {
+    font-style: italic;
+    text-align: center;
+}
