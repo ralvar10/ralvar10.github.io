@@ -1,0 +1,91 @@
+
+img {
+    width: 150px;
+    height: 150x;
+    margin: auto;
+}
+
+.imgborder {
+    border: solid 15px whitesmoke;
+    padding: auto;
+    margin: 0;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(103, 100, 100);
+  color: whitesmoke
+}
+
+h1 {
+font-size:1.4rem, 2.2vw + 1rem, 2.2rem;
+margin: 0;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 span {
+display: block;
+font-weight: 500;
+color: rgb(0, 0, 0);
+font-size: 0.9rem;
+}
+
+
+main 
+{ padding-block: 1.25rem 2rem; }
+h2 
+{ margin-top: 0.5rem; font-size: 1.6rem; }
+p 
+{ margin-block: 0.5rem 1rem; }
+
+
+
+main ul 
+{ padding-left: 1.25rem; margin-block: 0.75rem 1.25rem; }
+main ul li 
+{ margin-block: 0.25rem; }
+main ul li::marker 
+{ content: "✦ "; color: black; font-size: 1.05em; }
+
+
+strong { font-weight: 700; }
+
+
+
+address {
+font-style: normal;
+background: black;
+border: 1px solid #e5edf5;
+padding: 1rem;
+border-radius: 12px;
+box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+address a 
+{ 
+  color:rgb(211, 21, 47);;  
+}
+
+
+.cta {
+display: inline-block;
+padding: 0.65rem 1rem;
+border-radius: 10px;
+background: rgb(0, 0, 0);
+color: rgb(211, 21, 21);
+text-decoration: underline;
+font-weight: 600;
+border: 2px solid transparent;
+}
+
+.cta-row { margin-top: 1rem; }
+
+footer {
+padding-block: 1rem 2rem;
+border-top: 1px solid #ffffff;
+color: rgb(255, 255, 255);
+align-items: center;
+
+}
+
+small { color: whitesmoke; }
+.tagline { font-weight: 600; color: var(--muted); }
