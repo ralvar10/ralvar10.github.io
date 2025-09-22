@@ -34,3 +34,7 @@ figcaption {
     font-style: italic;
     text-align: center;
 }
+
+footer {
+  font-size: 12px;
+}
