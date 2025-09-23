@@ -158,6 +158,6 @@ small {
   font-weight: 600; color: #CFC8B8; /* muted ivory */
 }
 
-.scent {
-  text-decoration-thickness: 20px;
+.italics {
+  font-style: italic;
 }
