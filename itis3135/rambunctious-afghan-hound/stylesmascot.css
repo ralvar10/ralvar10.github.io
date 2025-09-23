@@ -1,0 +1,163 @@
+/* img */
+img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  display: block;
+}
+
+.imgborder {
+  border: solid 15px #EAE4D6;       /* darker ivory */
+  padding: 4px;
+  margin: 0;
+}
+
+/* base */
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #0B121A;        /* deep navy */
+  color: #EAE4D6;           /* darker ivory text */
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+
+.site-header {
+  background: #0F1620;      /* darker navy header */
+  border-bottom: 1px solid #232637;     /* slate line */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #EAE4D6;       /* brand text */
+  text-decoration: none;
+}
+
+.brand img {
+  width: 48px;
+  height: auto;
+  border: 2px solid #232637;        /* subtle border */
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav a {
+  color: #CFC8B8;       /* muted ivory */
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+.nav a[aria-current="page"], .nav a:hover {
+  background: #1F2230;              /* hover */
+}
+
+/* headings / text */
+h1 {
+  font-size: clamp(1.4rem, calc(2.2vw + 1rem), 2.2rem);
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 span {
+  display: block;
+  font-weight: 500;
+  color: #CFC8B8;       /* muted subheading */
+  font-size: 0.9rem;
+}
+
+main {
+  padding-block: 1.25rem 2rem;
+}
+
+h2 {
+  margin-top: 0.5rem; font-size: 1.6rem;
+}
+
+p  {
+  margin-block: 0.5rem 1rem;
+}
+
+main ul { padding-left: 1.25rem; margin-block: 0.75rem 1.25rem; }
+main ul li { margin-block: 0.25rem; }
+main ul li::marker { content: "✦ "; color:#A7F3D0; font-size: 1.05em; }        /* mint accent */
+
+strong { font-weight: 700; }
+
+.cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.card  {
+  background:#131726;       /* card navy */
+  border: 1px solid #232637;         /* slate border */
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.card h3, .card h4 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+/* address box */
+address {
+  font-style: normal;
+  background: #171922;          /* panel navy */
+  border: 1px solid #232637;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+address a { color: #A7F3D0; }       /* mint links */
+
+
+.cta {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  background: #A7F3D0;              /* mint button */
+  color: #073B2B;                   /* deep teal text */
+  text-decoration: underline;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+/* footer */
+footer {
+  padding-block: 1rem 2rem;
+  border-top: 1px solid #232637;    /* slate line */
+  color: #EAE4D6;                   /* ivory text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+small {
+  color: #CFC8B8;                   /* muted ivory */
+}
+.tagline {
+  font-weight: 600; color: #CFC8B8; /* muted ivory */
+}
+
+.scent {
+  text-decoration-thickness: 20px;
+}
