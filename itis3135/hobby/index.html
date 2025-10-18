@@ -17,8 +17,8 @@ html:focus-within {
 
 @media (prefers-reduced-motion:reduce) {  
     * {
-        transition:none !important;
-        animation:none !important;
+        transition:none;
+        animation:none;
     }
 }
 
@@ -27,7 +27,7 @@ html:focus-within {
 --panel: #1f1a2a; /* card background */
 --text: #f3f6f4; /* near-white */
 --muted: #bdb7c9; /* lilac */
---accent: #80ffd3; /* mint */
+--accent: #75f6c9; /* mint */
 --accent-2:#ffe180; /* warm yellow */
 --divider: "✴"; /* unique divider symbol */
 --radius: 16px;
@@ -62,7 +62,7 @@ header {
     backdrop-filter: blur(8px); 
 }
 
-header h1 { 
+ h1 { 
     margin: 0; 
     font-size: clamp(1.4rem, 2.5vw, 2rem); 
     letter-spacing: .5px; }
@@ -142,10 +142,10 @@ section {
 }
 
 
-section.active { 
+.active { 
     display: block; 
 }
-section h2 { 
+h2 { 
     margin-top: 0; 
     font-size: clamp(1.3rem, 2.2vw, 1.8rem); 
     color: var(--accent); 
@@ -191,10 +191,9 @@ figcaption {
     font-style: italic;
 }
 
-/* Misc. */
-.grid { 
+/* GRID + CARD */
+.grid {
     display: grid; 
-    grid-gap: 1rem; 
     gap: 1rem; 
 }
 
@@ -465,7 +464,9 @@ dd {
                     </div>
                     <div class="card">
                     <h3>Storage</h3>
-                    <p>Use wide hangers for coats, fold knits, and keep leather away from heat, opting to store in a cool, dry place. Track rotations to let leathers rest.</p>
+                    <p>Use wide hangers for coats, fold knits, and keep leather away from heat, opting to store in a cool, dry place. Track rotations to let leathers rest.
+                        Leathers inevitably tend to draw moisture which can erode its quality overtime. Using these strategies will ensure your garments' lifespan to lengthen.
+                    </p>
                     </div>
                     </div>
                     <figure>
@@ -493,7 +494,10 @@ dd {
                     <div class="grid cols-2">
                     <div class="card">
                     <h3>Personal reasons</h3>
-                    <p>Clothes archive how I move through life: seasons, studies, milestones. Each piece earns its place.</p>
+                    <p>Clothes archive how I move through life: seasons, studies, milestones. Each piece earns its place.
+                        Whether it is a something I lounge around in, or a statement piece that garners attention, these garments breathe
+                        life as you walk.
+                    </p>
                     </div>
                     <div class="card">
                     <h3>Cultural value</h3>
