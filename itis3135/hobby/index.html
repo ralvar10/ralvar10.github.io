@@ -62,7 +62,7 @@ header {
     backdrop-filter: blur(8px); 
 }
 
- h1 { 
+ header h1 { 
     margin: 0; 
     font-size: clamp(1.4rem, 2.5vw, 2rem); 
     letter-spacing: .5px; }
@@ -142,10 +142,11 @@ section {
 }
 
 
-.active { 
+section.active { 
     display: block; 
 }
-h2 { 
+
+section h2 { 
     margin-top: 0; 
     font-size: clamp(1.3rem, 2.2vw, 1.8rem); 
     color: var(--accent); 
@@ -192,12 +193,12 @@ figcaption {
 }
 
 /* GRID + CARD */
-.grid {
+.tabular {
     display: grid; 
     gap: 1rem; 
 }
 
-.grid.cols-2 { 
+.tabular .cols-2 { 
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
 }
 
@@ -304,7 +305,7 @@ dd {
                     <h2 id="h-what">The Hobby of Collecting Clothes</h2>
                     <p class="lede">Collecting clothes blends fashion industry, material knowledge and personal identity. From rare denim to artisanal footwear, 
                         each piece is a timestamp of design and culture.</p>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>Focus areas</h3>
                     <ul>
@@ -341,7 +342,7 @@ dd {
                 <!-- WHO -->
                  <section id="who" aria-labelledby="h-who">
                     <h2 id="h-who">About the Collector</h2>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>About Me</h3>
                     <p>Hi, I’m Ramiro: a software engineering student with a soft spot for pattern engineering, leather finishing, and how garments age.</p>
@@ -373,7 +374,7 @@ dd {
                 <!-- WHEN -->
                  <section id="when" aria-labelledby="h-when">
                     <h2 id="h-when">Best Times to Hunt</h2>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>Seasonality</h3>
                     <ul>
@@ -415,7 +416,7 @@ dd {
                 <!-- WHERE -->
                  <section id="where" aria-labelledby="h-where">
                     <h2 id="h-where">Best Sources and Places</h2>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>Places I look</h3>
                     <ul>
@@ -450,7 +451,7 @@ dd {
                 <!-- HOW -->
                  <section id="how" aria-labelledby="h-how">
                     <h2 id="h-how">Sourcing, Care, and Storage</h2>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>Care kit</h3>
                     <ul>
@@ -491,7 +492,7 @@ dd {
                 <!-- WHY -->
                  <section id="why" aria-labelledby="h-why">
                     <h2 id="h-why">Purpose and Philosophy</h2>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>Personal reasons</h3>
                     <p>Clothes archive how I move through life: seasons, studies, milestones. Each piece earns its place.
@@ -526,7 +527,7 @@ dd {
                 <!-- AI PROMPTS -->
                 <section id="ai" aria-labelledby="h-ai">
                     <h2 id="h-ai">What I Asked For: ChatGPT</h2>
-                    <div class="grid cols-2">
+                    <div class="tabular cols-2">
                     <div class="card">
                     <h3>Image prompts (photorealistic style)</h3>
                     <ul>
