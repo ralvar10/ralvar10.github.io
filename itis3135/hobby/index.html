@@ -5,8 +5,268 @@
         <meta name="viewport" content="width=device-width, intial-scale=1">
         <title>Collecting Clothes - Hobby | Ramiro Alvarez-Cruz </title>
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet"/>
         <script src="scripts/hobby.js"></script>
+        <style>
+*, *::before *::after {
+    box-sizing: border-box;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion:reduce) {  
+    * {transition:none !important;
+    animation:none !important}
+}
+
+:root {
+--bg: #16131e; /* deep purple */
+--panel: #1f1a2a; /* card background */
+--text: #f3f6f4; /* near-white */
+--muted: #bdb7c9; /* lilac */
+--accent: #80ffd3; /* mint */
+--accent-2:#ffe180; /* warm yellow */
+--divider: "✴"; /* unique divider symbol */
+--radius: 16px;
+--shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+body { 
+    background: radial-gradient(1200px 800px at 10% 5%, #211a34 0%, var(--bg) 55%); 
+    color: var(--text); 
+}
+
+
+/*  PAGE LAYOUT */
+.wrap { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 1rem; 
+}
+
+header, footer { 
+    background: linear-gradient(180deg, #221c31 0%, var(--panel) 100%); 
+    border-radius: var(--radius); 
+    box-shadow: var(--shadow); 
+}
+
+header { 
+    margin: 1rem 0; 
+    padding: 1rem; 
+    position: sticky; 
+    top: 0; 
+    z-index: 50; 
+    backdrop-filter: blur(8px); 
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: clamp(1.4rem, 2.5vw, 2rem); 
+    letter-spacing: .5px; }
+
+
+/*  NAV  */
+nav { 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    gap: .5rem; 
+    margin-top: .5rem; 
+    
+}
+
+.skip-link { 
+    position: absolute; 
+    left: -9999px; 
+    top: auto; 
+    width: 1px; 
+    height: 1px; 
+    overflow: hidden; 
+}
+
+.skip-link:focus { 
+    position: static; 
+    width: auto; 
+    height: auto; 
+    background: var(--accent); color: #001b12; 
+    padding: .3rem .5rem; 
+    border-radius: 8px; }
+
+
+.nav { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: .25rem .5rem; 
+    align-items: center; 
+}
+
+.nav a { 
+    text-decoration: none; 
+    color: var(--text); 
+    padding: .35rem .7rem; 
+    border-radius: 999px; 
+    border: 1px solid transparent; 
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease; 
+    font-weight: 600; 
+}
+
+.nav a:hover { 
+    background: #2a233b; 
+    border-color: #3a3153; 
+}
+
+.nav a[aria-current="page"] { 
+    background: var(--accent); 
+    color: #031f16;
+}
+
+.divider { 
+    opacity: .6; 
+    letter-spacing: .2em; 
+}
+
+
+main { margin: 1rem 0 2rem; }
+
+
+/* SECTIONS (pages) */
+section { 
+    display: none;
+    background: var(--panel); 
+    border-radius: var(--radius); 
+    padding: clamp(1rem, 2.5vw, 2rem); 
+    box-shadow: var(--shadow); 
+}
+
+
+section.active { 
+    display: block; 
+}
+section h2 { 
+    margin-top: 0; 
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem); 
+    color: var(--accent); 
+    text-shadow: 0 0 0 transparent; }
+
+p { color: var(--text); }
+
+.lede { 
+    color: var(--muted); 
+    font-size: 1.05rem; 
+}
+
+
+/* FIGURES */
+figure {
+    margin: 1.2rem 0; 
+    background: #241d36;
+    border: 1px solid #3a2e53;
+    border-radius: 14px;
+    overflow: hidden; 
+}
+
+figure img { 
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16/9; 
+    object-fit: cover; 
+}
+
+figcaption { 
+    padding: .6rem .9rem;
+    font-weight: 600;
+    color: var(--accent-2); 
+}
+.ai-prompt { 
+    padding: 0 .9rem 1rem; 
+    font-style: italic; 
+    color: var(--muted); 
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Misc. */
+.grid { 
+    display: grid; 
+    gap: 1rem; 
+}
+.grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { 
+    background: #241d36; 
+    border: 1px solid #3a2e53; 
+    border-radius: 14px; 
+    padding: 1rem; 
+}
+
+.badge { 
+    display: inline-block; 
+    font-size: .85rem; 
+    padding: .2rem .55rem; 
+    border-radius: 999px; 
+    background: #2a233b; 
+    border: 1px solid #3a3153; 
+    color: var(--muted); 
+}
+
+a { color: #9fffe3; }
+
+a:focus-visible { 
+    outline: 2px dashed var(--accent); 
+    outline-offset: 2px; 
+}
+
+
+
+/* TABLE  */
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #241d36; 
+    border: 1px solid #3a2e53; 
+    border-radius: 14px; overflow: hidden; 
+}
+
+caption { 
+    text-align: left; 
+    padding: .7rem .8rem; 
+    color: var(--accent-2); 
+    font-weight: 600; 
+}
+
+th, td { 
+    padding: .6rem .8rem; 
+    border-top: 1px solid #3a2e53; 
+}
+th { 
+    text-align: left; 
+    color: var(--muted); 
+    font-weight: 700; 
+}
+
+tbody tr:nth-child(odd) { 
+    background: #251f38; 
+}
+
+
+/* LIST and DL  */
+dl { 
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    gap: .4rem .8rem; 
+}
+dt { 
+    font-weight: 700; 
+    color: var(--accent-2); 
+}
+
+dd { 
+    margin: 0; 
+}
+        </style>
     </head>
 
     <body>
@@ -45,12 +305,17 @@
                     <ul>
                     <li>Archival Japanese avant‑garde (YY, CDG)</li>
                     <li>Artisanal footwear (CCP, Guidi)</li>
-                    <li>Workwear & heritage (selvedge denim, pigskin)</li>
+                    <li>Workwear and heritage (selvedge denim, pigskin)</li>
                     </ul>
                     </div>
                     <div class="card">
                         <h3>Why it matters</h3>
-                        <p>Garments are functional art. Understanding pattern‑making, leather tanning, and finishing techniques deepens appreciation and informs the individual consumption of the piece.</p>
+                        <p>Garments are functional art. Understanding pattern‑making, leather tanning, and finishing techniques deepens appreciation and informs the individual consumption of the piece.
+                            In a world where overconsumption, fast fashion, and trends
+                             are taking over the market, it is important to take a look into your wardrobe 
+                            and decide whether you are sacrificing your values when it comes to your environment, as well as a consumer. A glimpse into this will further reinforce your sense of indivivduality and make you more comfortable
+                            in your second skin. In that process, fashion transforms from a fleeting indulgence into a lifelong dialogue between body, material, and memory.
+                        </p>
                     </div>
                     </div>
                         <figure>
@@ -82,14 +347,20 @@
                     </div>
                     <div class="card">
                     <h3>Community</h3>
-                    <p>I trade knowledge with denim enthusiasts, leather lovers, and pattern cutters. Meetups and online forums help verify origin and care methods.</p>
+                    <p>I trade knowledge with denim enthusiasts, leather lovers, and pattern cutters. Meetups and online forums help verify origin and care methods.
+                        While at first this can be intimadating, the community is open and accepting. Make sure you are building off of what <span class="italic">you</span> 
+                        like. Looking for inspiration is okay; do not let anyone tell you otherwise. Foundation and exploration are all that matter when initially gauging what 
+                        you like, and what you do not like. The community is flourishing, and there will always be a community within your niche.
+                    </p>
                     </div>
                     </div>
                     <figure>
                     <img src="images/clothesflat.png" alt="A grid of garments laid flat on a backdrop." width="1600" height="900" />
                     <figcaption>Curated wardrobe grid</figcaption>
                     </figure>
-                    <p>Ethos: consume less, select with care, and always maintain. Document! (receipts, factory codes, leather lots) which preserves value.</p>
+                    <p>Ethos: consume less, select with care, and always maintain. Document! (receipts, factory codes, leather lots) which preserves value.
+
+                    </p>
                     </section>
                 
                 <!-- WHEN -->
@@ -100,14 +371,30 @@
                     <h3>Seasonality</h3>
                     <ul>
                     <li>Jan–Feb: archive clear‑outs, winter boots</li>
-                    <li>May–Jun: spring samples & light outerwear</li>
-                    <li>Aug–Sep: denim & early boots / coats for deals</li>
+                    <li>May–Jun: spring samples and light outerwear</li>
+                    <li>Aug–Sep: denim and early boots / coats for deals</li>
                     </ul>
                     </div>
                     <div class="card">
                     <h3>Weekly cadence</h3>
-                    <p>Set alerts for Sunday evenings and mid‑week mornings. Set aside one maintenance day (conditioning, brushing, storage organization).</p>
-                    </div>
+                    <p>Set alerts for Sunday evenings and mid‑week mornings. Set aside one maintenance day (conditioning, brushing, storage organization).
+                        An important step to curating what you love is to stay consistent. While this does not mean to overconsume, but rather to gauge your interests. take
+                        a little longer to research a garment, piece of footwear, or accesory that you resonate with. 
+                    </p>
+                    <p>Ask yourself
+                        <ul>
+                            <li>Why do I like this?</li>
+                            <li>What is the construction constrcution process?</li>
+                            <li>Will I wear this long-term?</li>
+                        </ul>
+                    </p>
+                    <p>Sales are always going on. This can be a great opportunity to splurge a little bit, especially during end-of-season sales.
+                        Take a look at a couple of your favorite brands and designers to look at their seasonal sales. 
+                    </p>
+                    <p>Organization can also be a great way to look at your entire wardrobe. This can also be a great time to look at the wear of your align-items
+                        and discern between which may need some maintenance, or which garments/pieces are holding up; were they to your expectations? Is this more of 
+                        a consumer error? These questions can lead you to some of the previosly mentioned ideas.
+                    </p>
                     </div>
                     <figure>
                     <img src="images/sourcing.png" alt="Clothing rack beside a calendar" width="1600" height="900" />
@@ -119,21 +406,21 @@
 
                 <!-- WHERE -->
                  <section id="where" aria-labelledby="h-where">
-                    <h2 id="h-where">Best Sources & Places</h2>
+                    <h2 id="h-where">Best Sources and Places</h2>
                     <div class="grid cols-2">
                     <div class="card">
                     <h3>Places I look</h3>
                     <ul>
                     <li>Local consignment stores and vintage fairs</li>
                     <li>Trusted online marketplaces/resellers and brand outlets (Grailed, Buyee, Instagram)</li>
-                    <li>Auctions for rare runs & sample lots</li>
+                    <li>Auctions for rare runs and sample lots</li>
                     </ul>
                     </div>
                     <div class="card">
                     <h3>What I verify</h3>
                     <ol>
                     <li>Measurements vs. pattern block, untagged size</li>
-                    <li>Material & construction (e.g., object-dyed, stitch type)</li>
+                    <li>Material and construction (e.g., object-dyed, stitch type)</li>
                     <li>Repair potential, longevity and aftercare availability</li>
                     </ol>
                     </div>
@@ -143,7 +430,13 @@
                     <figcaption>Boutique finds</figcaption>
                     <p class="ai-prompt"><span class="italic">Prompt: “Photorealistic close‑up of boutique rack with textured avant‑garde garments and swing tags, soft light.”</span></p>
                     </figure>
-                    <p>Origin matters: ask for receipts, factory codes, or dye lot info when possible. It is also important to make sure seller is reputable and trusted.</p>
+                    <p>Origin matters: ask for receipts, factory codes, or dye lot info when possible. It is also important to make sure the seller is reputable and trusted.</p>
+                    <p>Take a look at some of your local designers or thrift stores. Supporting local businesses not only reinforces your sense of belonging in your community,
+                        but also aids in your venture into collaborating with like-minded individuals. This can be a great ice-breaker into what can be an amazing, long-term relationship.
+                        Interaction between you and your local artisans also provides an insight into their creative process; this includes sourcing fabrics to final construction, to every thread sewn into place, helping you appreciate the artistry behind each garment. 
+                        Building these relationships fosters a better understanding of sustainable fashion and may even inspire you to begin customizing, repairing, or designing your own clothing. 
+                        Ultimately, collecting becomes more than ownership, but rather a participation in a living, evolving culture of self-expression.
+                    </p>
                 </section>
 
                 <!-- HOW -->
@@ -157,7 +450,7 @@
                     <li>Distilled water: other sources have the potential to leave mineral stains.</li>
                     <li>Microfiber towel (for application)</li>
                     <li>pH‑balanced leather cleaner + conditioner</li>
-                    <li>Cedar shoe trees & breathable bags</li>
+                    <li>Cedar shoe trees and breathable bags</li>
                     <li>Sewing machine/kit: repair rips, modify fit, and make it your own</li>
                     </ul>
                     </div>
@@ -171,12 +464,22 @@
                     <figcaption>Footwear maintenance: an important ritual</figcaption>
                     <p class="ai-prompt"><span class="italic">Prompt: “Photorealistic hands brushing artisanal leather boots on a wood bench, moody workshop lighting.”</span></p>
                     </figure>
-                    <p>Rule of three: verify, condition, document. It preserves the pieces' value and extends wearability.</p>
+                    <p>Rule of three: verify, condition, document. It preserves the pieces' value and extends wearability.
+                        When taking care of boots, it is important to look into what material they are. Do some research and review what products are compatible with your
+                        piece. Make sure to gently brush off any debris with a horse-hair brush. The soft bristles of this brush will be sure to not interrupt any of the finishes or scratch the leather.
+                        After use a small bit of distilled water and gently drag this across the surface of the piece; it is important not to scrubs, as this can damage the finish. Wait 10-15 minutes
+                        and allow to dry. Following this, use a small bit of your conditioning product and apply everywhere and small, circular motions. Test a bit of this product somehwhere on the garment where
+                        it will be unnoticeable to make sure the application is compatible with your product. Similiar to painting, use the same stroke as to not over-condition your piece, as this can lead to 
+                        irregularities to the leather, making it less durable. Think of this as your skin, as it can clog the pores and not allow the skin to breathe. This step is optional, wait about another 15 minutes after Application
+                        and use a water-proofing wax to seal all the conditioner into the piece. This will not only restore, but also protect your piece to further its lifespan. Follow the application process that your product advises,
+                        and wait about 24-48 hours after this until you wear/use it again. In about 3-6 months, you should redo this process, depending on your lifestyle. For regular city-wear, you should be more than ready to trample
+                        the streets feeling better than ever.
+                    </p>
                 </section>
 
                 <!-- WHY -->
                  <section id="why" aria-labelledby="h-why">
-                    <h2 id="h-why">Purpose & Philosophy</h2>
+                    <h2 id="h-why">Purpose and Philosophy</h2>
                     <div class="grid cols-2">
                     <div class="card">
                     <h3>Personal reasons</h3>
@@ -193,12 +496,21 @@
                     <figcaption>Patina as biography</figcaption>
                     <p class="ai-prompt"><span class="italic">Prompt: “Photorealistic macro of leather patina with creases, rich brown tone, dramatic side‑light.”</span></p>
                     </figure>
-                    <p>Collecting teaches patience, material literacy, and stewardship.</p>
+                    <p>Collecting teaches patience, material literacy, and stewardship. With time, you will find that most of your wardrobe goes with everything you'd want to wear. Consider how much
+                        more time you will save on deciding what to wear. The next time you are looking at tags, consider the materials used in the garment. You will find that much of the construction,
+                        process, and price do not match what is being sold. You will cling to your garments as they remind you of special moments you spent with them. I become attached to my clothes and footwear,
+                        as they remind me where I was in life. My boots? I wore these and walked miles when I visited Mexico for the first time. This shirt? My friend was clinging to it as he could not walk straight 
+                        along the strip. The longevity and thoughfulness from the makers make all of these moments possible. Without thoutful construction, these garments and pieces would not be able to tell so many stories.
+                        While many people think of clothing as materialistic, a true sentimental value becomes embedded within each piece. The most beautiful part of collecting is rotating what you wear.
+                        Sell some things and reinvest into your closet if you become bored. Relight and weave new thoughts and memories into your clothes. Be mindful of the process that went into your second-skin and make it yours.
+                        The cliche term <span class="italic">“quality over quantity”</span> carries more truth than most realize—it’s a quiet philosophy that transforms consumption into appreciation, and ownership into connection.
+                        Each thread becomes a record of time, craft, and carry a testament to how living art can exist in what we wear every day.
+                    </p>
                 </section>
 
                 <!-- AI PROMPTS -->
                 <section id="ai" aria-labelledby="h-ai">
-                    <h2 id="h-ai">What I Asked For</h2>
+                    <h2 id="h-ai">What I Asked For: ChatGPT</h2>
                     <div class="grid cols-2">
                     <div class="card">
                     <h3>Image prompts (photorealistic style)</h3>
@@ -208,6 +520,7 @@
                     <li>Boutique rack detail with textured garments and tags.</li>
                     <li>Boot care scene in a moody workshop.</li>
                     <li>Macro of leather patina with dramatic lighting.</li>
+                    <li>Folded selvedge denim with dim lighting showing red outseam</li>
                     </ul>
                     </div>
                     <div class="card">
@@ -216,9 +529,9 @@
                     <p>I learned from this explanation and wrote my own JS based on the concept provided.</p>
                     </div>
                     <figure>
-                    <img src="images/prompt_collage.jpg" alt="Collage of generated images representing denim, boots, racks, and calendars." width="1600" height="900" />
+                    <img src="images/collage.png" alt="Collage of generated images representing denim, boots, racks, and calendars." width="1600" height="900" />
                     <figcaption>Prompt collage</figcaption>
-                    <p class="ai-prompt"><span class="italic">Prompt: “Photorealistic collage grid of clothing collection themes: denim, leather boots, boutique rack, calendar scheduling.”</span></p>
+                    <p class="ai-prompt"><span class="italic">Prompt: Make a collage of all of these photos together.</span></p>
                     </figure>
                 </section>
 
