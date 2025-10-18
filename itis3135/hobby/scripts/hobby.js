@@ -18,7 +18,7 @@ document.addEventListener ('DOMContentLoaded', () => {
 
     nav.addEventListener ('click', (e) => {
         const a = e.target.closest('a[href^="#"]');
-        if(!a) {
+        if (!a) {
             return;
         }
         e.preventDefault();
