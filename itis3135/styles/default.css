@@ -48,3 +48,52 @@ figcaption {
 footer {
   font-size: 12px;
 }
+
+/*  Table: FCC Outline  */
+.outline {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+}
+
+.outline caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+}
+
+.outline thead th {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e3e3e3;
+  background: #f7f7f7;
+}
+
+.outline tbody th,
+table.outline tbody td {
+  padding: 0.65rem 0.5rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.outline tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.outline tfoot th,
+.outline tfoot td {
+  padding: 0.75rem 0.5rem;
+  font-weight: 700;
+  border-top: 2px solid #e3e3e3;
+  background: #f7f7f7;
+}
+
+table.outline tbody td:last-child,
+table.outline tfoot td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
