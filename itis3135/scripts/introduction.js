@@ -105,7 +105,6 @@ function showResult() {
     var divider = (document.getElementById("divider").value || "•").trim();
     var quoteEl = document.getElementById("quote");
     var quote = ((quoteEl && quoteEl.value) || "").trim();
-    var author = (document.getElementById("quoteAuthor")?.value || "").trim();
 
     // Prefer uploaded image
     var fileInput = document.getElementById("introImage");
