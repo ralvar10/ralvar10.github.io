@@ -103,7 +103,8 @@ function showResult() {
     var caption = document.getElementById("caption").value.trim();
     var statement = document.getElementById("personalStmt").value.trim();
     var divider = (document.getElementById("divider").value || "•").trim();
-    var quote = (document.getElementById("quote")?.value || "").trim();
+    var quoteEl = document.getElementById("quote");
+    var quote = ((quoteEl && quoteEl.value) || "").trim();
     var author = (document.getElementById("quoteAuthor")?.value || "").trim();
 
     // Prefer uploaded image
