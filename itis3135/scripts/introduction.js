@@ -6,8 +6,9 @@ var defaults = {
     mascotAnimal: "Afghan Hound",
     imgFile: "https://webpages.charlotte.edu/ralvar10/itis3135/images/IMG_4637.jpg",
     caption: "At the CHHS bathroom mirror selfie, 2025",
-    personalStmt: "I'm a CS student at UNC Charlotte interested in software engineering and design.",
-    divider: "✴",
+    personalStmt: "My name is Ramiro Alvarez-Cruz, and I am a Junior currently attending UNCC. I am allergic to peanuts and tree nuts but do not tell anyone. I am from Mebane, North Carolina and have lived in North Carolina all of my life. I have an interest in ethical hacking, architecture, AI and robotics.",
+     
+    divider: "|",
     quote: "The key to good design is finding beauty in unexpected places.",
     quoteAuthor: "Martin Margiela",
 
@@ -136,7 +137,7 @@ function showResult() {
         '<article class="card">' +
         '  <header>' +
         '    <h2>Introduction</h2>' +
-        '    <h2>' + name + ' | ' + mascot + '</h2>' +  
+        '    <h2>' + name + "'s" + ' ' + divider + ' ' + defaults.mascotAnimal + '</h2>' +  
         '  </header>' +
         '  <div class="hr"></div>' +
         '  <section class="intro">' +
@@ -145,7 +146,6 @@ function showResult() {
         '      <figcaption><em>' + caption + '</em></figcaption>' +
         '    </figure>' +
         '    <p>' + statement + '</p>' +
-        '    <p class="muted" aria-hidden="true">' + divider + ' ' + divider + ' ' + divider + '</p>' +
         '    <ul>' +
         '      <li><strong>Personal Background:</strong> ' + personal + '</li>' +
         '      <li><strong>Professional Background:</strong> ' + professional + '</li>' +
