@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Introduction Form</title>
+    <link rel="stylesheet" href="styles/intro_form.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="muted">ITIS 3135 Introduction Form</h1>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+
+        <!-- FORM VIEW -->
+        <section id="form-wrap" class="card">
+            <form id="intro-form" novalidate>
+                <div class="note" role="status">
+                    Instructions: Required fields are marked with *.
+                </div>
+
+                <!-- Identity -->
+                <div class="row">
+                    <div>
+                        <label for="firstName">First Name *</label>
+                        <input id="firstName" type="text" placeholder="John" required />
+                    </div>
+                    <div>
+                        <label for="lastName">Last Name *</label>
+                        <input id="lastName" type="text" placeholder="Doe" required />
+                    </div>
+                </div>
+
+                <!-- Mascot -->
+                <div class="row">
+                    <div>
+                        <label for="mascotAdj">Mascot Adjective *</label>
+                        <input id="mascotAdj" type="text" placeholder="Brave" required />
+                    </div>
+                    <div>
+                        <label for="mascotAnimal">Mascot Animal *</label>
+                        <input id="mascotAnimal" type="text" placeholder="Lion" required />
+                    </div>
+                </div>
+
+                <!-- Image + caption -->
+                <div class="row">
+                    <div>
+                        <label for="imageFile">Upload Image *</label>
+                        <input name="file" type="file" id="introImage" accept="image/*" />
+                        <button type="button" onclick="loadImage()">CLICK HERE TO LOAD</button>
+                    </div>
+                    <div id="loadImage" class="hidden"></div>
+                </div>
+
+                <label for="caption">Image Caption *</label>
+                <input id="caption" type="text" placeholder="My photo at ..." required />
+
+                <!-- Personal statement + divider -->
+                <label for="personalStmt">Personal Statement *</label>
+                <textarea id="personalStmt" placeholder="A few sentences introducing you." required></textarea>
+
+                <label for="divider">Divider (e.g., ✴ | ~) *</label>
+                <input id="divider" type="text" placeholder="✴" required />
+
+                <div class="hr"></div>
+
+                <!-- Bullets -->
+                <h3>Main bullets *</h3>
+                <div class="row">
+                    <div>
+                        <label for="bullet1">Personal Background *</label>
+                        <textarea id="bullet1" required></textarea>
+                    </div>
+                    <div>
+                        <label for="bullet2">Professional Background *</label>
+                        <textarea id="bullet2" required></textarea>
+                    </div>
+                    <div>
+                        <label for="bullet3">Academic Background *</label>
+                        <textarea id="bullet3" required></textarea>
+                    </div>
+                    <div>
+                        <label for="bullet4">Primary Computer *</label>
+                        <textarea id="bullet4" required></textarea>
+                    </div>
+                </div>
+
+                <div class="hr"></div>
+
+                <!-- Courses (Title + Description) -->
+                <h3>Courses I’m Taking, &amp; Why</h3>
+                <div id="courses"></div>
+                <div class="actions">
+                    <button type="button" id="addCourseBtn">+ Add Course</button>
+                </div>
+
+                <div class="hr"></div>
+
+                <!-- Quote  -->
+                <h3>Favorite Quote *</h3>
+                <div class="row">
+                    <div>
+                        <label for="quote">Quote *</label>
+                        <textarea id="quote" required></textarea>
+                    </div>
+                    <div>
+                        <label for="quoteAuthor">Author *</label>
+                        <input id="quoteAuthor" type="text" required />
+                    </div>
+                </div>
+
+                <div class="hr"></div>
+
+                <!-- Funny thing -->
+                <label for="bullet6">Funny thing? (optional)</label>
+                <textarea id="bullet6" placeholder="I laugh at dad jokes!"></textarea>
+
+                <div class="hr"></div>
+
+                <!-- Anything else -->
+                <label for="shareExtra">Anything else? (optional)</label>
+                <textarea id="shareExtra" placeholder="Anything else you'd like to share..."></textarea>
+
+                <div class="hr"></div>
+
+                <!-- Form buttons -->
+                <div class="actions">
+                    <button type="submit">Submit</button>
+                    <button type="reset" id="resetBtn">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- RESULT VIEW -->
+        <section id="result-wrap" class="hidden"></section>
+        <p class="muted">After submitting, use the “Reset and fill the form again” link to try again.</p>
+        <button type="button" id="clearBtn">Clear Form</button>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/introduction.js" defer></script>
+</body>
+
+</html>

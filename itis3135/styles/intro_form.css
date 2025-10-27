@@ -1,0 +1,199 @@
+/* Theme (Home Page) */
+:root {
+    --bg: rgb(7, 8, 8);
+    --text: rgb(255, 0, 64);
+    --link: rgb(255, 0, 0);
+    --panel: rgba(255, 255, 255, 0.05);
+    --input-bg: rgb(15, 16, 16);
+    --border: rgb(255, 0, 64);
+}
+
+/* Page */
+.center {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0 1rem 2rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.45;
+    text-align: center;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header,
+main,
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+.muted {
+    opacity: 0.8;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* center the quote + author only */
+blockquote {
+    text-align: center;
+}
+
+
+/* Card wrapper (form + result) */
+.card {
+    background: var(--panel);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: left;
+}
+
+/* grid rows */
+form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+}
+
+/* Labels + inputs */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: .5rem;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--input-bg);
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    min-height: 92px;
+}
+
+/* Actions (Submit and Reset) */
+.actions {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.actions button {
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.actions button[type="submit"] {
+    background: var(--text);
+    color: var(--bg);
+}
+
+/* Divider line */
+.hr {
+    height: 1px;
+    background: rgba(255, 0, 64, .3);
+    margin: 1rem 0;
+}
+
+/* Courses */
+.course-row {
+    display: grid;
+    grid-template-columns: 110px 110px 1fr 1.2fr auto;
+    gap: .5rem;
+    align-items: end;
+    margin: .5rem 0;
+}
+
+.course-row button {
+    padding: .45rem .7rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--text);
+    color: var(--bg);
+    cursor: pointer;
+}
+
+/* Result */
+figure {
+    margin: 0;
+}
+
+.result-img {
+    max-width: 260px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+ul,
+ol {
+    padding-left: 1.25rem;
+}
+
+/* Utilities */
+.hidden {
+    display: none;
+}
+
+.note {
+    padding: .5rem .75rem;
+    background: #fff8db;
+    border: 1px solid #ffe27a;
+    border-radius: 10px;
+    color: #222;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+@media (max-width: 760px) {
+
+    form .row,
+    .course-row {
+        grid-template-columns: 1fr;
+    }
+}
