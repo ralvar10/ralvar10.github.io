@@ -84,7 +84,7 @@ blockquote {
     column-gap: 1rem;
 }
 
-.row > div {
+.row>div {
     min-width: none;
 }
 
