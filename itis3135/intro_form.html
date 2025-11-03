@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Introduction Form</title>
     <link rel="stylesheet" href="styles/intro_form.css" />
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+
 </head>
 
 <body>
     <header>
         <h1 class="muted">ITIS 3135 Introduction Form</h1>
-        <div data-include="components/header.html"></div>
+        <div class="header" data-include="components/header.html"></div>
     </header>
 
     <main>
@@ -143,6 +146,7 @@
         <section id="result-wrap" class="hidden"></section>
         <p class="muted">After submitting, use the “Reset and fill the form again” link to try again.</p>
         <button type="button" id="clearBtn">Clear Form</button>
+        <button type="button" id="btnGenerateHTML">Generate HTML</button>
         <p>I understand that what is on this page is not password protected and I will not put anything here that I
             don’t want publicly available."</p>
     </main>
@@ -151,6 +155,9 @@
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/introduction.js" defer></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/generate_html.js"></script>
+
 </body>
 
 </html>

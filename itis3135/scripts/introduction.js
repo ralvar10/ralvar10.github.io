@@ -31,7 +31,7 @@ function loadImage() {
     // Always unhide when the button is clicked
     wrap.classList.remove('hidden');
 
-    // If no file selected, show me
+    // If no file selected, show Ramiro
     if (!file) {
         wrap.innerHTML = '<img src="' + defaults.imgFile + '" alt="Default picture">';
         return;
