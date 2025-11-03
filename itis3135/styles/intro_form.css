@@ -9,9 +9,7 @@
 }
 
 /* Page */
-.center {
-    text-align: center;
-}
+
 
 body {
     margin: 0;
@@ -192,6 +190,12 @@ ol {
 
 .hidden {
     display: none !important;
+}
+
+/* Left-Align for HTML code output */
+#result-wrap,
+#result-wrap code {
+  text-align: left;
 }
 
 
