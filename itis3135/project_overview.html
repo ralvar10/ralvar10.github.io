@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Overview — Aidan McCollick (Alvarez-Cruz)</title>
+  <meta name="description"
+    content="Requirements & design document for the Cinematic Narrative Photography Portfolio project." />
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+
+<body>
+  <header>
+    <h1>Project Overview</h1>
+    <div data-include="components/header.html"></div>
+
+    <h2>Project Overview — Aidan McCollick (Cinematic Narrative Photography Portfolio)</h2>
+
+  </header>
+
+  <main>
+    <!-- Project Name -->
+    <section aria-labelledby="project-name">
+      <h3 id="project-name">Project Name</h3>
+      <p><strong>8CigsN4Roses — Cinematic Narrative Photography Portfolio</strong></p>
+    </section>
+
+    <!-- Project Overview -->
+    <section aria-labelledby="project-overview">
+      <h3 id="project-overview">Project Overview</h3>
+
+      <h4>Function / Purpose</h4>
+      <p>
+        A cinematic, story-driven portfolio site for a film photographer that highlights
+        creative direction, editing, and styling through interactive, scroll-based “photo stories.”
+        The site improves visibility, invites collaboration, and communicates process.
+      </p>
+
+      <h4>Intended Users</h4>
+      <ul>
+        <li>Art directors, stylists, brands, editorial teams (potential clients)</li>
+        <li>Followers of film-based, narrative photography</li>
+        <li>Creative collaborators (MUA, wardrobe, set design, assistants)</li>
+      </ul>
+
+      <h4>Overview of the Content</h4>
+      <ul>
+        <li>Cinematic homepage reel and featured projects</li>
+        <li>Project pages with concept, inspiration, BTS, edit notes, and final images</li>
+        <li>Interactive “Before/After” grading sliders</li>
+        <li>Interactive “Build a Moodboard” tool (share/download)</li>
+        <li>About, Contact, and passworded Client Proofs</li>
+      </ul>
+    </section>
+
+    <!-- Client Information -->
+    <section aria-labelledby="client-info">
+      <h3 id="client-info">Client Information</h3>
+      <ul>
+        <li><strong>Name:</strong> Aidan McCollick</li>
+        <li><strong>Organization/Profession:</strong> Film Photographer & Creative Director</li>
+        <li><strong>Email:</strong>aidjmcc@gmail.com</li>
+        <li><strong>Phone:</strong> 919-695-1295 </li>
+        <li><strong>Platform:</strong> Squarespace (with embedded HTML/JS for custom interactivity)</li>
+      </ul>
+
+    </section>
+
+    <!-- Wireframe -->
+    <section aria-labelledby="wireframe">
+      <h3 id="wireframe">Wireframe</h3>
+      <p>
+        Draw.io file (UNCC Google Drive):
+        <a href="https://drive.google.com/file/d/1ZIABkNXo7PJVrwy_PC6EitJKDNjIctz_/view?usp=sharing">View the diagram</a>
+      </p>
+      <figure>
+        <img src="images/website_proposal_wireframejpg.jpg"
+          alt="Wireframe diagram"/>
+        <figcaption>Wireframe: homepage hero, projects overview, and narrative project layout.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Site Map -->
+    <section aria-labelledby="site-map">
+      <h3 id="site-map">Site Map</h3>
+      <p>
+        Draw.io sitemap:
+        <a href="https://drive.google.com/file/d/1ZIABkNXo7PJVrwy_PC6EitJKDNjIctz_/view?usp=sharing">View the site map</a>
+      </p>
+      <figure>
+        <img src="images/website_proposal_sitemap.jpg"
+          alt="Site map diagram" />
+        <figcaption>Site Map (5+ pages with clear linking).</figcaption>
+      </figure>
+
+      <h4>Pages (5+ required)</h4>
+      <ol>
+        <li>Home (index.html)</li>
+        <li>Projects (projects.html)</li>
+        <li>Project Story (project-<em>slug</em>.html) — multiple instances</li>
+        <li>Moodboard Builder (moodboard.html)</li>
+        <li>About (about.html)</li>
+        <li>Contact / Client Proofs (contact.html / proofs.html)</li>
+      </ol>
+    </section>
+
+    <!-- Page Design -->
+    <section aria-labelledby="page-design">
+      <h3 id="page-design">Page Design</h3>
+
+      <article>
+        <h4>Home (index.html)</h4>
+        <ul>
+          <li><strong>Purpose:</strong> Set cinematic tone; route to key stories.</li>
+          <li><strong>Audience:</strong> All visitors.</li>
+          <li><strong>Content:</strong> Full-bleed reel or cross-fade hero; featured projects; brief thesis line.</li>
+          <li><strong>Data entry:</strong> No.</li>
+          <li><strong>Validation:</strong> N/A.</li>
+          <li><strong>Links/Controls:</strong> Global nav; “View Story” buttons.</li>
+          <li><strong>Actions:</strong> Smooth scroll; lazy-load images; play/pause hero video.</li>
+          <li><strong>Notes:</strong> Subtle film-grain overlay; accessible contrast.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h4>Projects (projects.html)</h4>
+        <ul>
+          <li><strong>Purpose:</strong> Browse all projects.</li>
+          <li><strong>Audience:</strong> Clients, fans.</li>
+          <li><strong>Content:</strong> Grid/list with thumbnails, loglines, tags (portrait, editorial, monochrome).
+          </li>
+          <li><strong>Data entry:</strong> No.</li>
+          <li><strong>Validation:</strong> N/A.</li>
+          <li><strong>Links/Controls:</strong> Filters (tag buttons), sort dropdown.</li>
+          <li><strong>Actions:</strong> Filter/sort via JS; deep-link to project pages.</li>
+          <li><strong>Notes:</strong> jQuery-UI <em>Accordion</em> or <em>Tabs</em> acceptable here.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h4>Project Story (project-<em>slug</em>.html)</h4>
+        <ul>
+          <li><strong>Purpose:</strong> Scroll-driven narrative (concept → inspo → BTS → edit notes → finals).</li>
+          <li><strong>Audience:</strong> Clients, collaborators.</li>
+          <li><strong>Content:</strong> Images, captions, brief text sections, short clips.</li>
+          <li><strong>Data entry:</strong> Optional comment form (read-only handling only).</li>
+          <li><strong>Validation:</strong> If form present, validate required fields and email format (client-side).
+          </li>
+          <li><strong>Links/Controls:</strong> “Before/After” slider; next/previous project; “Add to Moodboard.”</li>
+          <li><strong>Actions:</strong> Scroll animations; update URL hash by chapter; slider drag events.</li>
+          <li><strong>Notes:</strong> Avoid server-side storage; use localStorage for preferences.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h4>Moodboard Builder (moodboard.html)</h4>
+        <ul>
+          <li><strong>Purpose:</strong> Let users curate a shareable/downloadable collage of selected images.</li>
+          <li><strong>Audience:</strong> Visitors, art directors.</li>
+          <li><strong>Content:</strong> Draggable thumbnails, canvas export preview.</li>
+          <li><strong>Data entry:</strong> No account; local only.</li>
+          <li><strong>Validation:</strong> N/A.</li>
+          <li><strong>Links/Controls:</strong> “Add/Remove,” “Clear,” “Download PNG,” “Copy Share Link.”</li>
+          <li><strong>Actions:</strong> Use Canvas API for export; optional querystring to reconstruct a board.</li>
+          <li><strong>Notes:</strong> No server storage; comply with read-only rule.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h4>About (about.html)</h4>
+        <ul>
+          <li><strong>Purpose:</strong> Communicate persona and values.</li>
+          <li><strong>Audience:</strong> All visitors.</li>
+          <li><strong>Content:</strong> Short bio, portrait, ethos statement.</li>
+          <li><strong>Data entry:</strong> No.</li>
+          <li><strong>Validation:</strong> N/A.</li>
+          <li><strong>Links/Controls:</strong> Social links; “Contact.”</li>
+          <li><strong>Actions:</strong> None beyond navigation.</li>
+          <li><strong>Notes:</strong> Keep mysterious/minimal; consider handwritten caption style.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h4>Contact / Client Proofs (contact.html / proofs.html)</h4>
+        <ul>
+          <li><strong>Purpose:</strong> Inquiries and passworded client galleries (read-only proofs).</li>
+          <li><strong>Audience:</strong> Clients.</li>
+          <li><strong>Content:</strong> Contact form; proof thumbnails; approve/reject toggles (client-side only).</li>
+          <li><strong>Data entry:</strong> Yes—contact fields; proof selection.</li>
+          <li><strong>Validation:</strong> Required + email pattern; length checks.</li>
+          <li><strong>Links/Controls:</strong> Submit; filter; approve/reject (local state or existing API).</li>
+          <li><strong>Actions:</strong> AJAX form to email/third-party without reload; update UI state for proofs.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Dynamic Functionality -->
+    <section aria-labelledby="dynamic">
+      <h3 id="dynamic">Dynamic Functionality</h3>
+
+      <h4>Description & Purpose</h4>
+      <ul>
+        <li><strong>Before/After Slider (Project Story):</strong> Show RAW vs final grade; communicates editing skill.
+        </li>
+        <li><strong>Moodboard Builder (Moodboard):</strong> Drag-to-collect; export to PNG; optional share link.</li>
+        <li><strong>Scroll Animations (Home/Project Story):</strong> Cinematic reveals; chapter markers; deeper
+          engagement.</li>
+        <li><strong>AJAX Contact (Contact):</strong> Send form to email/third-party without page reload.</li>
+        <li><strong>jQuery-UI Widget (Projects):</strong> Tabs/Accordion for filtering or FAQ; accessible interactions.
+        </li>
+      </ul>
+
+    
+    </section>
+
+    <!-- Requirements Checklist -->
+    <section aria-labelledby="requirements">
+      <h3 id="requirements">Requirements Checklist</h3>
+      <ul>
+        <li>5+ pages with single-click nav</li>
+        <li>Consistent header/footer (footer includes HTML/CSS validation links)</li>
+        <li>JavaScript interactivity (sliders, filters, scroll effects)</li>
+        <li>jQuery-UI widget (Tabs/Accordion)</li>
+        <li>AJAX form submission (Contact)</li>
+        <li>Wireframe and Site Map embedded with links to Draw.io</li>
+        <li>Technical writing; no grammar/spelling errors</li>
+      </ul>
+    </section>
+
+
+    <!-- References -->
+    <section aria-labelledby="notes">
+      <h3 id="notes">References</h3>
+      <ul>
+        <li>Dyanmic Before/After Slider:<a href="https://www.peterstewartphotography.com/Before-and-After-Gallery">
+            Peter Stewart (Photographer)</a>
+        </li>
+        <li>Cinematic Homepage Reel:<a href="https://www.entirestudios.com/?gad_source=1&gad_campaignid=21204019185&gbraid=0AAAAAp5YHu4U7lNTYjBL95wBJXkqH1sPE&gclid=CjwKCAiAwqHIBhAEEiwAx9cTeQgdZblqjhJ2nGgDJFJRuDzn_ugvxEqPa-hxpNHmEwhz8X5h2Jtt2BoCZBQQAvD_BwE"> Entire Studios (Clothing Ecommerce Site)</a></li>
+        <li>Sroll-driven Image Reel: <a href="https://concreterep.com/artists/gabriel-moses">Gabriel Moses:
+            Photographer</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+
+</html>
