@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moodboard — Aidan McCollick</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header data-include="components/header.html"></header>
+
+    <main class="main">
+        <section class="container">
+            <h1>Build a Moodboard</h1>
+            <p>Select images and compose a simple 3×2 grid.</p>
+
+            <div class="moodboard-layout">
+                <div class="moodboard-palette">
+                    <h2>Palette</h2>
+                    <div class="palette-grid" id="moodboard-palette-grid">
+                        <!-- STATIC LIST --- JS will randomize order -->
+
+                        <!-- FACE – FISSURE -->
+                        <img src="assets/images/flb_1.jpg" alt="Frame 1 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_5.jpg" alt="Frame 2 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_2.jpg" alt="Frame 3 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_3.jpg" alt="Frame 4 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_4.jpg" alt="Frame 5 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_6.jpg" alt="Frame 6 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_7.jpg" alt="Frame 7 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_8.jpg" alt="Frame 8 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_9.jpg" alt="Frame 9 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_10.jpg" alt="Frame 10 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_11.jpg" alt="Frame 11 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_12.jpg" alt="Frame 12 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_13.jpg" alt="Frame 13 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_14.jpg" alt="Frame 14 from FACE - FISSURE Collection">
+                        <img src="assets/images/flb_15.jpg" alt="Frame 15 from FACE - FISSURE Collection">
+
+                        <!-- FRUITS OF LABOR -->
+                        <img src="assets/images/fol_1.jpg" alt="Frame 1 from Fruits of Labor">
+                        <img src="assets/images/fol_4.jpg" alt="Frame 2 from Fruits of Labor">
+                        <img src="assets/images/fol_2.jpg" alt="Frame 3 from Fruits of Labor">
+                        <img src="assets/images/fol_3.jpg" alt="Frame 4 from Fruits of Labor">
+                        <img src="assets/images/fol_5.jpg" alt="Frame 5 from Fruits of Labor">
+                        <img src="assets/images/fol_6.jpg" alt="Frame 6 from Fruits of Labor">
+                        <img src="assets/images/fol_7.jpg" alt="Frame 7 from Fruits of Labor">
+                        <img src="assets/images/fol_8.jpg" alt="Frame 8 from Fruits of Labor">
+
+                        <!-- AS WE FLOCK -->
+                        <img src="assets/images/awf_1.jpg" alt="Frame 1 from As We Flock">
+                        <img src="assets/images/awf_5.jpg" alt="Frame 2 from As We Flock">
+                        <img src="assets/images/awf_2.jpg" alt="Frame 3 from As We Flock">
+                        <img src="assets/images/awf_3.jpg" alt="Frame 4 from As We Flock">
+                        <img src="assets/images/awf_4.jpg" alt="Frame 5 from As We Flock">
+                        <img src="assets/images/awf_6.jpg" alt="Frame 6 from As We Flock">
+
+                        <!-- ARCHIVE -->
+                        <img src="assets/images/archive12.jpg" alt="Frame 12 from Archive">
+                        <img src="assets/images/archive4.jpg" alt="Frame 4 from Archive">
+                        <img src="assets/images/archive17.png" alt="Frame 17 (alt version) from Archive">
+                        <img src="assets/images/archive13.jpg" alt="Frame 13 from Archive">
+                        <img src="assets/images/archive15.jpg" alt="Frame 15 from Archive">
+                        <img src="assets/images/archive1.jpg" alt="Frame 1 from Archive">
+                        <img src="assets/images/archive16.jpg" alt="Frame 16 from Archive">
+                        <img src="assets/images/archive10.jpg" alt="Frame 10 from Archive">
+                        <img src="assets/images/archive8.jpg" alt="Frame 8 from Archive">
+                        <img src="assets/images/archive6.jpg" alt="Frame 6 from Archive">
+                        <img src="assets/images/archive18.jpg" alt="Frame 18 from Archive">
+                        <img src="assets/images/archive5.jpg" alt="Frame 5 from Archive">
+                        <img src="assets/images/archive11.jpg" alt="Frame 11 from Archive">
+                        <img src="assets/images/archive14.jpg" alt="Frame 14 from Archive">
+                        <img src="assets/images/archive9.jpg" alt="Frame 9 from Archive">
+                        <img src="assets/images/archive3.jpg" alt="Frame 3 from Archive">
+                        <img src="assets/images/archive2.jpg" alt="Frame 2 from Archive">
+                        <img src="assets/images/archive17.jpg" alt="Frame 17 from Archive">
+                        <img src="assets/images/archive7.jpg" alt="Frame 7 from Archive">
+                        <img src="assets/images/archive20.jpg" alt="Frame 20 from Archive">
+                        <img src="assets/images/archive21.jpg" alt="Frame 21 from Archive">
+                        <img src="assets/images/archive22.jpg" alt="Frame 22 from Archive">
+                        <img src="assets/images/archive23.jpg" alt="Frame 23 from Archive">
+                        <img src="assets/images/archive24.jpg" alt="Frame 24 from Archive">
+                    </div>
+                </div>
+
+                <div class="moodboard-canvas">
+                    <h2>Canvas</h2>
+                    <canvas id="board" width="1200" height="800" aria-label="Moodboard canvas"></canvas>
+                    <div class="controls">
+                        <button class="btn" id="add-selected">Add Selected</button>
+                        <button class="btn" id="clear-board">Clear</button>
+                        <button class="btn" id="download-board">Download PNG</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="assets/js/HTMLInclude.min.js"></script>
+    <script src="assets/js/moodboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,522 @@
+:root {
+    --bg: #0e0e0f;
+    --ink: #f3f3f3;
+    --muted: #bdbdbd;
+    --card: #17171a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+a {
+    color: var(--ink);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* --- Typography --- */
+h1,
+h2 {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+/* Smaller headings */
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    border-bottom: 1px solid #2a2a2f;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+/* Primary nav */
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.site-nav a {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-family: var(--text);
+    font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    border-color: #3a3a40;
+}
+
+/* --- Hero --- */
+.hero .hero-media {
+    border: 1px solid #2a2a2f;
+    background: #111;
+}
+
+.hero .hero-media img {
+    width: 100%;
+    display: block;
+}
+
+.hero .hero-media figcaption {
+    padding: 0.75rem 1rem;
+    color: var(--muted);
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(22px, 3.2vw, 40px);
+    letter-spacing: 0;
+}
+
+.lede {
+    color: var(--muted);
+    max-width: 40rem;
+}
+
+/* --- Cards & Grids --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #2a2a2f;
+    padding: 0.75rem;
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h3 {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+}
+.card-projects h3 {
+    margin: 0.5rem 0 0;
+    font-size: 1.6rem;      
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid #3a3a40;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--text);
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    background: #1e1e22;
+}
+
+/* --- Before/After Slider --- */
+.ba-slider {
+    position: relative;
+    max-width: 100%;
+    border: none;
+    background: #111;
+    overflow: hidden;
+    height: 400px;
+    outline: none;
+    justify-content: center;
+}
+
+.ba-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ba-before {
+    z-index: 1;
+}
+
+.ba-after {
+    z-index: 2;
+    clip-path: inset(0 50% 0 0);
+}
+
+.ba-range {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    appearance: none;
+    background: transparent;
+    height: 40px;
+    border: none;
+    outline: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.ba-legend {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+}
+
+/* --- Gallery --- */
+.gallery img {
+    width: 100%;
+    display: block;
+    border: 1px solid #2a2a2f;
+}
+
+/* --- Moodboard --- */
+.moodboard-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.moodboard-palette h2,
+.moodboard-canvas h2 {
+    margin-bottom: 0.5rem;
+}
+
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.palette-grid img {
+    width: 100%;
+    border: 1px solid #2a2a2f;
+    cursor: pointer;
+}
+
+.palette-grid img.selected {
+    outline: 2px solid #999;
+}
+
+.moodboard-canvas canvas {
+    width: 100%;
+    border: 1px solid #2a2a2f;
+    background: #0a0a0a;
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* --- Footer --- */
+.site-footer {
+    margin-top: 3rem;
+    border-top: 1px solid #2a2a2f;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.validators {
+    text-align: center;
+    margin: 1rem 0 2rem;
+    color: var(--muted);
+}
+
+/* --- Forms --- */
+form {
+    max-width: 640px;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+label {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-family: var(--text);
+}
+
+input,
+textarea {
+    background: var(--card);
+    border: 1px solid #2a2a2f;
+    color: var(--ink);
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    font-family: var(--text);
+}
+/* --- LOGO --- */
+.brand {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 52px;
+    border-radius: 999px;
+    padding: .3rem;
+    overflow: hidden;
+    background-image: url("../images/brand-logo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.brand a {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+}
+
+/* --- Hero Video --- */
+.hero .hero {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero .hero-media img,
+.hero .hero-media video.hero-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;    
+    max-height: 75vh;      
+}
+.hero .hero-media {
+    position: relative;
+    border: 1px solid #2a2a2f;
+    background: #111;
+    overflow: hidden;
+}
+
+/* Overlay container */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.0) 55%);
+}
+
+/* Big title on video */
+.hero-title {
+    margin: 0 0 0.5rem;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-size: clamp(120px, 10vw, 120px);
+    color: #ffffff;
+}
+.hero-subtitle {
+    margin: 0 0 1rem;
+    font-family: "Tangerine", cursive;
+    font-size: 1.2rem;
+    color: #f3f3f3;
+}
+
+/* Tagline under title */
+.hero-tagline {
+    margin: 0 0 1.5rem;
+    max-width: 30rem;
+    color: #f3f3f3;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Button on video */
+.hero-btn {
+    border-color: #f3f3f3;
+    font-weight: 500;
+}
+
+/* ================================
+   PROJECT PAGES (individual shoots)
+   ================================ */
+
+.project-meta {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+}
+
+/* project title  */
+main .container h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* first intro paragraph under the title */
+main .container p {
+    max-width: 40rem;
+}
+
+/* tightened spacing between sections -> project-pages */
+main .container + .container {
+    padding-top: 1rem;
+    border-top: 1px solid #1a1a1f;
+}
+
+/* hero image on project page */
+.hero-media {
+    border: 1px solid #2a2a2f;
+    background: #111;
+}
+
+.hero-media img {
+    width: 100%;
+    display: block;
+}
+
+.hero-media figcaption {
+    padding: 0.75rem 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* concept card grid */
+.container .card-grid figure.card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 0.6rem;
+}
+
+.container .card-grid figure.card img {
+    border-radius: 6px;
+}
+
+.container .card-grid figure.card figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.card-projects .thumb {
+  width: 100%;              
+  height: auto;             
+  display: block;
+  object-fit: cover;        
+  border-radius: 4px;    
+}
+
+/* project gallery section */
+.gallery h2 {
+    margin-bottom: 0.75rem;
+}
+
+.gallery .card-grid img {
+    border-radius: 6px;
+    border: 1px solid #2a2a2f;
+}
+
+/* credits ish */
+.container ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.container ul li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* Back to Projects button on project pages */
+.container .btn {
+    margin-top: 0.5rem;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .moodboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

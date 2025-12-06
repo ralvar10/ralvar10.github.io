@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Aidan McCollick</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+               <div data-include="components/header.html"></div>
+
+    </header>
+
+    <main class="main">
+    <section class="container">
+        <h1>Projects</h1>
+
+        <div id="project-list" class="card-grid">
+            <a class="card-projects" href="projects/fol.html">
+                <img class="thumb" src="assets/images/fol_8.jpg" alt="Fragment">
+                <h3>Fruits of Labor</h3>
+            </a>
+
+            <a class="card-projects" href="projects/asweflock.html">
+                <img class="thumb" src="assets/images/awf_thumb.jpg"
+                     alt="As We Flock with Vice and Stronghold">
+                <h3>As We Flock with Vice and Stronghold</h3>
+            </a>
+
+            <a class="card-projects" href="projects/lookbook.html">
+                <img class="thumb" src="assets/images/face_thumb.jpeg" alt="FACE – Fissure Collection">
+                <h3>Face – Fissure Collection</h3>
+            </a>
+
+            <a class="card-projects" href="projects/fragments.html">
+                <img class="thumb" src="assets/images/framents_thumb.jpg" alt="Fragments">
+                <h3>Archive</h3>
+            </a>
+        </div>
+    </section>
+</main>
+
+    <footer class="site-footer">
+        <div data-include="components/footer.html"></div>
+        <script>$(function () { $("#project-tabs").tabs(); });</script>
+    </footer>
+</body>
+<script src="assets/js/HTMLInclude.min.js"></script>
+</html>
