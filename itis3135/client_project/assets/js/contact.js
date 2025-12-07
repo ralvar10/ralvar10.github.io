@@ -18,7 +18,7 @@
         const data = Object.fromEntries(new FormData(form).entries());
         // Demo only: simulate async success
 
-        await new Promise(r => setTimeout(r, 800));
+        await new Promise((r) => setTimeout(r, 800));
 
         //Update the status message and reset the form
         status.textContent = 'Thanks — your message has been queued.';
