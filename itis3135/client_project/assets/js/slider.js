@@ -21,7 +21,7 @@
     setClip(slider.value);
 
     //update the "after" image clip as the slider moves
-    slider.addEventListener('input', e => setClip(e.target.value));
+    slider.addEventListener('input', (e) => setClip(e.target.value));
 
 
     // this is optional, button adds the current image to the moodboard selection
